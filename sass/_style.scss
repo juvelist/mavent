@@ -50,25 +50,25 @@
 
     /* Styles */
 
-//::selection {
-//    color: $colorLight;
-//    background-color: $colorGrey;
-//}
-//
-//::-webkit-scrollbar {
-//    width: 17px;
-//    height: 8px;
-//}
-//
-//::-webkit-scrollbar-thumb {
-//    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-//    background-color: $colorLightGrey;
-//}
-//
-//::-webkit-scrollbar-track {
-//    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-//    background-color: $colorGrey;
-//}
+::selection {
+    color: $colorTextLight;
+    background-color: $colorTextGrey;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: $colorTextGrey;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: $colorBackNav;
+}
 
 html, body {
     height: 100%;
@@ -79,8 +79,6 @@ body, select, option {
     color: $colorTextDark;
     font: 16px 'blender-pro-medium', sans-serif;
 }
-
-
 
 a {
     color: $colorTextDark;
@@ -477,24 +475,6 @@ strong.italic {
     }
 }
 
-
-.form__placeholder::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: $colorTextForm;
-}
-.form__placeholder::-moz-placeholder { /* Firefox 19+ */
-    color: $colorTextForm;
-}
-.form__placeholder:-ms-input-placeholder { /* IE 10+ */
-    color: $colorTextForm;
-}
-.form__placeholder:-moz-placeholder { /* Firefox 18- */
-    color: $colorTextForm;
-}
-.form__placeholder::-moz-placeholder {
-    opacity: 1;
-}
-
-
 .form {
     font: 16px 'blender-pro-book', sans-serif;
     max-width: 340px;
@@ -588,6 +568,11 @@ strong.italic {
         resize: none;
     }
 
+    & .form-control:focus {
+        border-color: #ced4da;
+        box-shadow: none;
+    }
+
     &__label {
         cursor: pointer;
         height: 100%;
@@ -626,12 +611,22 @@ strong.italic {
         width: 100%;
         color: $colorTextLight;
         font: 16px 'blender-pro-bold', sans-serif;
+
+        &:hover {
+            background-color: $colorBackMain;
+            border-color: #ced4da;
+            color: $colorTextDark;
+        }
     }
 }
 
 .form__error {
     & .input-group-text,
     & .form-control {
+        border-color: $colorTextRed;
+    }
+
+    & .form-control:focus {
         border-color: $colorTextRed;
     }
 
@@ -644,4 +639,20 @@ strong.italic {
         top: 10px;
         width: 30px;
     }
+}
+
+.form__placeholder::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $colorTextForm;
+}
+.form__placeholder::-moz-placeholder { /* Firefox 19+ */
+    color: $colorTextForm;
+}
+.form__placeholder:-ms-input-placeholder { /* IE 10+ */
+    color: $colorTextForm;
+}
+.form__placeholder:-moz-placeholder { /* Firefox 18- */
+    color: $colorTextForm;
+}
+.form__placeholder::-moz-placeholder {
+    opacity: 1;
 }

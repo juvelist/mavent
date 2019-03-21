@@ -6,10 +6,10 @@
   #{$property}: #{$value};
 }
 
+
 @mixin select-none($select: none) {
   @include css3-prefix('user-select', $select);
 }
-
 
 @mixin transition-mixin($style: all, $duration: .4s, $type: ease, $delay : 0s) {
   @include css3-prefix('transition', $style $duration $type $delay);
@@ -39,7 +39,6 @@
 @mixin transform-scaleY($deg:1) {
   @include css3-prefix('scaleY', scale($deg));
 }
-
 
 @mixin background-vertical($startColor: #3C3C3C, $endColor: #999999) {
   background:    -moz-linear-gradient(top, $startColor, $endColor);
