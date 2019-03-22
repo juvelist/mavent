@@ -22,8 +22,8 @@
 </head>
 <body>
     <header class="header__block h-100">
-        <div class="container-fluid wrapper p-0 h-100">
-            <nav class="header__navigation navbar navbar-expand-md navbar-dark container-fluid">
+        <div class="container-fluid p-0 h-100">
+            <nav class="header__navigation navbar navbar-expand-md navbar-dark container-fluid wrapper">
                 <h1 class="header__top navbar-brand text-hide p-0 m-0">
                     <a class="header__logo d-inline-block sprite" href="#">MAVent</a>
                 </h1>
@@ -178,8 +178,8 @@
                 </article>
             </section>
         </div>
-        <div class="about__block_out container-fluid wrapper pr p-0">
-            <div class="about__block pr">
+        <div class="about__block_out container-fluid pr p-0">
+            <section class="about__block pr">
                 <div class="row container about__wrapper mx-auto align-items-center h-100">
                     <div class="col-12 text-center">
                         <h4 class="about__header">О системе «MAVENT»</h4>
@@ -197,9 +197,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-        <div class="container wrapper mx-auto p-0 text-center">
+        <div class="container mx-auto p-0 text-center">
             <section class="objects__block objects__wrapper mx-auto">
                 <h3 class="objects__header sprite-b pr">Наши объекты</h3>
                 <p class="objects__text fs24">В рамках объединения системы организован полный технологический цикл<br>
@@ -239,9 +239,8 @@
                 </div>
             </section>
         </div>
-
-        <div class="form__block_out container-fluid wrapper pr p-0">
-            <div class="form__block pr">
+        <div class="form__block_out container-fluid pr p-0">
+            <section class="form__block pr">
                 <div class="row container form__wrapper mx-auto align-items-center h-100">
                     <div class="col-12 text-center">
                         <h3 class="form__header text-uppercase">Обратная связь</h3>
@@ -250,31 +249,28 @@
                             <div class="form form-row mx-auto">
                                 <div class="col-12 px-0">
                                     <div class="input-group form__input_group sprite-a pr form__error">
+                                    <!-- If need add or remove class "form__error" -->
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="form-input1">
-                                                <label for="form-email" class="form__label form__label_email sprite-a">
-
-                                                </label>
+                                                <label for="form-email" class="form__label form__label_email sprite-a"></label>
                                             </span>
                                         </div>
                                         <input type="text" class="form__placeholder form-control" id="form-email" placeholder="авыргу@gmail.com" aria-describedby="inputGroupPrepend2" required>
                                     </div>
-                                    <div class="input-group form__input_group">
+                                    <div class="input-group form__input_group sprite-a pr">
+                                    <!-- If need add or remove class "form__error" -->
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="form-input2">
-                                                <label for="form-tel" class="form__label form__label_tel sprite-a">
-
-                                                </label>
+                                                <label for="form-tel" class="form__label form__label_tel sprite-a"></label>
                                             </span>
                                         </div>
                                         <input type="text" class="form__placeholder form-control sprite-a pr" id="form-tel" placeholder="+7 (978) 020 - 04 - 54" aria-describedby="inputGroupPrepend2" required>
                                     </div>
-                                    <div class="input-group form__input_group">
+                                    <div class="input-group form__input_group sprite-a pr">
+                                    <!-- If need add or remove class "form__error" -->
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="form-input3">
-                                                <label for="form-name" class="form__label form__label_name sprite-a">
-
-                                                </label>
+                                                <label for="form-name" class="form__label form__label_name sprite-a"></label>
                                             </span>
                                         </div>
                                         <input type="text" class="form__placeholder form-control sprite-a pr" id="form-name" placeholder="Аркадий" aria-describedby="inputGroupPrepend2" required>
@@ -284,17 +280,100 @@
                                     </div>
                                     <button type="submit" class="form__button btn text-uppercase">Отправить</button>
                                 </div>
-
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-
+        <div class="container mx-auto p-0 text-center">
+            <section class="contacts__block contacts__wrapper mx-auto">
+                <h3 class="contacts__header sprite-b pr">Контактные данные</h3>
+                <div class="contacts__block_in container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 class="contacts__title fs18">Рабочий телефон и факс</h4>
+                            <a href="tel:+74957213645" class="contacts__info db fs16">+7 (495) 721-36-45</a>
+                            <a href="tel:+74954379865" class="contacts__info db fs16">+7 (495) 437-98-65</a>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="contacts__title fs18">Физический адрес</h4>
+                            <p class="contacts__info fs16">г. Москва, ул. 4-я Парковая д. 16</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="contacts__title fs18">Контактный email</h4>
+                            <a target="_blank" href="mailto:mav@mavent.ru" class="contacts__info db fs16">mav@mavent.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="map__block container-fluid p-0"></div>
+        <div class="partners__block partners__wrapper container"></div>
+        <div class="container mx-auto p-0 text-center">
+            <section class="news__block mx-auto">
+                <h3 class="news__header sprite-b pr">Последние новости</h3>
+                <div class="container news__container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="#" class="news dib pr" style="background-image: url('img/temp/image-news-1.jpg')">
+                                <div class="news__block_in d-flex align-items-center justify-content-center">
+                                    <p class="news__text fs16">Латвия получила ноту от ОАЭ <br>
+                                        после досмотра посла в аэропорту <br>
+                                        Риги
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="news dib pr" style="background-image: url('img/temp/image-news-2.jpg')">
+                                <div class="news__block_in d-flex align-items-center justify-content-center">
+                                    <p class="news__text fs16">RT узнал о плане демократов <br>
+                                        по свержению Трампа
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="news dib pr" style="background-image: url('img/temp/image-news-3.jpg')">
+                                <div class="news__block_in d-flex align-items-center justify-content-center">
+                                    <p class="news__text fs16">Олимпийская чемпионка <br>
+                                        Ольга Корбут выставила <br>
+                                        свои медали на аукцион
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="news dib pr" style="background-image: url('img/temp/image-news-4.jpg')">
+                                <div class="news__block_in d-flex align-items-center justify-content-center">
+                                    <p class="news__text fs16">В Испании не видел света <br>
+                                        в конце тоннеля
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="news news__add dib pr sprite-b">
+                                <div class="news__add_block d-flex align-items-center justify-content-center">
+                                    <p class="news__add_text fs24">Посмотреть <br>
+                                        остальные новости
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-
-
+    <footer class="footer__block pr align-items-center justify-content-center d-flex mx-auto">
+        <div class="footer__contain text-center pr">
+            <a class="footer__logo d-inline-block sprite text-hide" href="#">MAVent</a>
+            <p class="footer__text fs12">Торговая марка «MAVENT»</p>
+            <p class="footer__text fs12">© 2013-2017 Все права защищены законом.</p>
+        </div>
+    </footer>
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
