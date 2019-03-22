@@ -113,10 +113,12 @@ strong.italic {
 /*** HEADER ***/
 .header {
     &__block {
+        background-color: $colorBackNav;
         margin-bottom: 130px;
     }
 
     &__navigation {
+        min-height: 80px;
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -125,11 +127,6 @@ strong.italic {
         height: 28px;
         width: 132px;
         background-position: 0 0;
-    }
-
-    &__navigation{
-        background-color: $colorBackNav;
-        min-height: 80px;
     }
 }
 
@@ -177,6 +174,8 @@ strong.italic {
     &__block {
         height: calc(100% - 80px);
         background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         &:before,
         &:after {
@@ -366,6 +365,7 @@ strong.italic {
 .about {
     &__block {
         background-position-x: center;
+        background-size: cover;
         height: 600px;
         margin-bottom: 70px;
         width: 100%;
@@ -481,6 +481,7 @@ strong.italic {
 
     &__block {
         background-position-x: center;
+        background-size: cover;
         height: 730px;
         margin-bottom: 100px;
         width: 100%;
@@ -611,6 +612,7 @@ strong.italic {
         width: 100%;
         color: $colorTextLight;
         font: 16px 'blender-pro-bold', sans-serif;
+        @include transition-mixin();
 
         &:hover {
             background-color: $colorBackMain;
@@ -655,4 +657,157 @@ strong.italic {
 }
 .form__placeholder::-moz-placeholder {
     opacity: 1;
+}
+
+
+.contacts {
+    &__block_in {
+        color: $colorTextGrey;
+        margin-bottom: 95px;
+    }
+
+    &__wrapper {
+        max-width: 1090px;
+    }
+
+    &__header {
+        color: $colorHeaderDark;
+        font-size: 52px;
+        margin-bottom: 90px;
+    }
+
+    &__title {
+        font-family: 'museo-sans-cyrl-500', sans-serif;
+        margin-bottom: 35px;
+    }
+
+    &__info {
+        font-family: 'museo-sans-cyrl-300', sans-serif;
+        color: $colorTextGrey;
+        @include transition-mixin('color');
+
+        &:hover {
+            color: $colorTextDark;
+        }
+    }
+}
+
+.map {
+    &__block {
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        margin-bottom: 70px;
+        width: 100%;
+        @include bgi('image-google-maps.jpg');
+    }
+}
+
+.partners {
+    &__block {
+        background-position: center;
+        background-size: cover;
+        height: 191px;
+        margin-bottom: 60px;
+        width: 100%;
+        @include bgi('image-partners.jpg');
+    }
+
+    &__wrapper {
+        max-width: 1060px;
+    }
+}
+
+/*** FOOTER ***/
+.footer {
+    &__block {
+        background-color: $colorBackFoot;
+        height: 220px;
+
+        &:before {
+            background: linear-gradient(135deg, #fff 7px, transparent 0), linear-gradient(-135deg, #fff 7px, transparent 0);
+            background-repeat: repeat-x;
+            background-size: 13px 10px;
+            content: "";
+            display: block;
+            height: 10px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+    }
+
+    &__logo {
+        background-position: 0 0;
+        height: 28px;
+        margin-bottom: 25px;
+        width: 132px;
+    }
+
+    &__text {
+        color: #ccc;
+        font-family: 'museo-sans-cyrl-300', sans-serif;
+    }
+}
+
+.news {
+    background: no-repeat center;
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 80px;
+    width: 300px;
+
+    &__container {
+        margin-bottom: 20px;
+    }
+
+    &__block_in {
+        background-color: rgba(0, 0, 0, .6);
+        height: 100%;
+        width: 100%;
+    }
+
+    &__header {
+        color: $colorHeaderDark;
+        font-size: 52px;
+        margin-bottom: 90px;
+    }
+
+    &__text {
+        color: #fefefe;
+        font-family: 'museo-sans-cyrl-500', sans-serif;
+        line-height: 30px;
+    }
+
+    &__add {
+        border: 2px solid #f2f2f2;
+
+        &:before {
+            background-position: 0 -308px;
+            bottom: 0;
+            display: inline-block;
+            height: 182px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            z-index: -1;
+        }
+
+        &_block {
+            height: 100%;
+            width: 100%;
+        }
+
+        &_text {
+            color: $colorHeaderDark;
+            font-family: 'blender-pro-bold', sans-serif;
+            line-height: 40px;
+        }
+
+    }
 }
