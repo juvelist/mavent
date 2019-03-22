@@ -146,6 +146,8 @@ strong.italic {
     &__list {
         line-height: 0;
         margin-right: -19px;
+
+
     }
 
     &__item:not(:last-child) {
@@ -706,7 +708,7 @@ strong.italic {
 .partners {
     &__block {
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         height: 191px;
         margin-bottom: 60px;
         width: 100%;
@@ -811,3 +813,4 @@ strong.italic {
 
     }
 }
+
