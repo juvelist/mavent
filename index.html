@@ -18,6 +18,8 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
 
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
@@ -51,29 +53,43 @@
                 </div>
                 <ul class="social-lang__list mb-0 ml-md-auto">
                     <li class="social-lang__item dib">
-                        <a href="#" class="social-lang__link social-lang__link-lg dib sprite"></a>
+                        <a href="#" class="social-lang__link social-lang__link-lg dib sprite pr"></a>
                     </li>
                     <li class="social-lang__item dib">
-                        <a href="#" class="social-lang__link social-lang__link-vk dib sprite"></a>
+                        <a href="#" class="social-lang__link social-lang__link-vk dib sprite pr"></a>
                     </li>
                     <li class="social-lang__item dib">
-                        <a href="#" class="social-lang__link social-lang__link-fb dib sprite"></a>
+                        <a href="#" class="social-lang__link social-lang__link-fb dib sprite pr"></a>
                     </li>
                 </ul>
             </nav>
-            <div class="banner__block pr" style="background-image: url('img/temp/image-banner-slider.jpg')">
-                <div class="container banner__wrapper pa h-100 d-flex">
-                    <div class="banner__brand_block align-self-center text-center">
-                        <h2 class="banner__brand">
-                            <span class="banner__brand_mav text-uppercase">MAV</span><span class="banner__brand_ent text-uppercase">ent</span>
-                        </h2>
-                        <h3 class="banner__header text-uppercase">Вентрилируемые фасады</h3>
-                        <p class="banner__text">Система «MAVent» известна на российском рынке,<br>
-                            которая специализируется на проектировании, производстве,<br>
-                            поставке и монтаже вентилируемых фасадов.</p>
-                    </div>
+            <div class="banner__block_out owl-carousel owl-theme" id="slider-banner">
+                <div class="banner__block pr" style="background-image: url('img/temp/image-banner-slider.jpg')">
+
+                </div>
+                <div class="banner__block pr" style="background-image: url('img/temp/image-banner-slider.jpg')">
+
+                </div>
+                <div class="banner__block pr" style="background-image: url('img/temp/image-banner-slider.jpg')">
+
+                </div>
+                <div class="banner__block pr" style="background-image: url('img/temp/image-banner-slider.jpg')">
+
                 </div>
             </div>
+
+            <div class="container banner__wrapper pa d-flex">
+                <div class="banner__brand_block align-self-center text-center">
+                    <h2 class="banner__brand">
+                        <span class="banner__brand_mav text-uppercase">MAV</span><span class="banner__brand_ent text-uppercase">ent</span>
+                    </h2>
+                    <h3 class="banner__header text-uppercase">Вентрилируемые фасады</h3>
+                    <p class="banner__text">Система «MAVent» известна на российском рынке,<br>
+                        которая специализируется на проектировании, производстве,<br>
+                        поставке и монтаже вентилируемых фасадов.</p>
+                </div>
+            </div>
+
         </div>
     </header>
     <main>
@@ -237,6 +253,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="slider__block_out mx-auto">
+                    <div class="slider__block owl-carousel owl-theme" id="slider-block">
+                        <img src="img/temp/image-slider.jpg" class="slider__image" alt="objects image">
+                        <img src="img/temp/image-slider.jpg" class="slider__image" alt="objects image">
+                        <img src="img/temp/image-slider.jpg" class="slider__image" alt="objects image">
+                        <img src="img/temp/image-slider.jpg" class="slider__image" alt="objects image">
+                    </div>
+                    <div class="slider__info container px-0">
+                        <div class="row justify-content-between">
+                            <div class="col-4 slider text-left">
+                                <h4 class="slider__header fs14">Название</h4>
+                                <p class="slider__text fs18">Элитный жилой комплекс Ронис</p>
+                            </div>
+                            <div class="col-4 slider text-left">
+                                <h4 class="slider__header fs14">Адрес</h4>
+                                <p class="slider__text fs18">г. Санкт-Петербург, В.О. 8-я линия, 37</p>
+                            </div>
+                            <div class="col-4 slider text-left">
+                                <h4 class="slider__header fs14">Объём работ и тип Ситемы</h4>
+                                <p class="slider__text fs18">5000 м2, MAVent K-500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         <div class="form__block_out container-fluid pr p-0">
@@ -255,7 +295,7 @@
                                                 <label for="form-email" class="form__label form__label_email sprite-a"></label>
                                             </span>
                                         </div>
-                                        <input type="text" class="form__placeholder form-control" id="form-email" placeholder="авыргу@gmail.com" aria-describedby="inputGroupPrepend2" required>
+                                        <input type="text" class="form__input form__placeholder form-control" id="form-email" placeholder="авыргу@gmail.com" aria-describedby="inputGroupPrepend2" required>
                                     </div>
                                     <div class="input-group form__input_group sprite-a pr">
                                     <!-- If need add or remove class "form__error" -->
@@ -264,7 +304,7 @@
                                                 <label for="form-tel" class="form__label form__label_tel sprite-a"></label>
                                             </span>
                                         </div>
-                                        <input type="text" class="form__placeholder form-control sprite-a pr" id="form-tel" placeholder="+7 (978) 020 - 04 - 54" aria-describedby="inputGroupPrepend2" required>
+                                        <input type="text" class="form__input form__placeholder form-control sprite-a pr" id="form-tel" placeholder="+7 (978) 020 - 04 - 54" aria-describedby="inputGroupPrepend2" required>
                                     </div>
                                     <div class="input-group form__input_group sprite-a pr">
                                     <!-- If need add or remove class "form__error" -->
@@ -273,10 +313,10 @@
                                                 <label for="form-name" class="form__label form__label_name sprite-a"></label>
                                             </span>
                                         </div>
-                                        <input type="text" class="form__placeholder form-control sprite-a pr" id="form-name" placeholder="Аркадий" aria-describedby="inputGroupPrepend2" required>
+                                        <input type="text" class="form__input form__placeholder form-control sprite-a pr" id="form-name" placeholder="Аркадий" aria-describedby="inputGroupPrepend2" required>
                                     </div>
-                                    <div class="input-group form__textarea form__input_group">
-                                        <textarea class="form__placeholder form-control" id="form-textarea" placeholder="Ваше обращение" rows="8" required></textarea>
+                                    <div class="input-group form__textarea_group form__input_group">
+                                        <textarea class="form__textarea form__placeholder form-control" id="form-textarea" placeholder="Ваше обращение" rows="8" required></textarea>
                                     </div>
                                     <button type="submit" class="form__button btn text-uppercase">Отправить</button>
                                 </div>
@@ -380,6 +420,7 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>
