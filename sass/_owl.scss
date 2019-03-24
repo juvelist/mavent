@@ -1,0 +1,96 @@
+/* Dots */
+#slider-banner,
+#slider-block  {
+    & .owl-dots .owl-dot span {
+        background-color: transparent;
+        border: 2px solid $colorTextLight;
+        height: 18px;
+        width: 18px;
+    }
+
+    & .owl-dots .owl-dot.active span,
+    & .owl-dots .owl-dot:hover span {
+        background-color: $colorTextRed;
+        border-color: $colorTextRed;
+    }
+
+    & .owl-dots .owl-dot:focus {
+        outline: none;
+    }
+
+    & .owl-dots {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 10;
+    }
+}
+
+
+#slider-block {
+    & .owl-nav {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        width: 100%;
+        @include transform-translate(0, -50%);
+    }
+
+    & .owl-nav .owl-prev:before,
+    & .owl-nav .owl-next:before,
+    & .owl-nav .owl-prev:after,
+    & .owl-nav .owl-next:after {
+        background: center no-repeat url(../img/sprite.png?v=#{$spriteVersion});
+        content: "";
+        position: absolute;
+        display: inline-block;
+        height: 62px;
+        width: 34px;
+        top: 50%;
+        @include transform-translate(0, -50%);
+        @include transition-mixin();
+    }
+
+    & .owl-nav .owl-prev:before,
+    & .owl-nav .owl-prev:after {
+        left: -65px;
+    }
+
+    & .owl-nav .owl-next:before,
+    & .owl-nav .owl-next:after {
+        right: -65px;
+    }
+
+    & .owl-nav .owl-prev:before {
+        background-position: -166px -148px;
+        opacity: 1;
+    }
+    & .owl-nav .owl-prev:after {
+        background-position: -166px -214px;
+        opacity: 0;
+    }
+    & .owl-nav .owl-next:before {
+        background-position: -204px -148px;
+        opacity: 1;
+    }
+    & .owl-nav .owl-next:after {
+        background-position: -204px -214px;
+        opacity: 0;
+    }
+
+    & .owl-nav .owl-prev:hover:before {
+        opacity: 0;
+    }
+    & .owl-nav .owl-prev:hover:after {
+        opacity: 1;
+    }
+    & .owl-nav .owl-next:hover:before {
+        opacity: 0;
+    }
+    & .owl-nav .owl-next:hover:after {
+        opacity: 1;
+    }
+}
+

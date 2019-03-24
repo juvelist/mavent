@@ -24,6 +24,10 @@
   @include css3-prefix('transform', translate3d($degX, $degY, $degZ));
 }
 
+@mixin transform-translate($degX, $degY) {
+  @include css3-prefix('transform', translate($degX, $degY));
+}
+
 @mixin transform-rotate($deg:-90deg) {
   @include css3-prefix('transform', rotate($deg));
 }

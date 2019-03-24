@@ -5,4 +5,35 @@
         }
     }
 
+    .news:hover {
+        & .news__block_in {
+            background-color: transparent;
+        }
+    }
+
+    .social-lang__link:hover:after {
+        opacity: 1;
+    }
+
+    .system__image:hover .system__image_link {
+        opacity: 1;
+    }
+
+    .form {
+        &__button:hover {
+            background-color: $colorBackMain;
+            border-color: #ced4da;
+            color: $colorTextDark;
+        }
+
+        &__input_group:hover,
+        &__textarea_group:hover {
+            animation: shake-down 1s ease-in-out both;
+        }
+    }
+
+    .contacts:hover {
+        color: $colorTextDark;
+    }
+
 }
